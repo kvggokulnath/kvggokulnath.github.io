@@ -1,0 +1,37 @@
+<html>
+<head><title>task3</title>
+<style>
+#bo{
+border-color:green;
+}
+</style>
+</head>
+<body>
+<form onsubmit="return validate()">
+Name:<input type="text"  id="na"> <span id="n1" style="color:red"></span></br></br>
+Email:<input type="text" id="em"><span id="n2" style="color:red"></span></br></br>
+website:<input type="text"  id="web"><span id="n3" style="color:red"></span></br></br>
+Message:<textarea cols="20" rows="6"  id="mes"></textarea><span id="n4" style="color:red"></span></br>
+<input type="submit" value="submit">
+</form>
+<script>
+function validate(){
+let na=document.getElementById("na").value;
+let em=document.getElementById("em").value;
+let web=document.getElementById("web").value;
+let mes=document.getElementById("mes").value;
+if(na=="" || em=="" || web=="" || mes==""){
+document.getElementById("na").style.border="thin solid red";
+document.getElementById("n1").innerHTML="this field is required";
+document.getElementById("em").style.border="thin solid red";
+document.getElementById("n2").innerHTML="valid email addressrequired";
+document.getElementById("web").style.border="thin solid red";
+document.getElementById("n3").innerHTML="valid url required";
+document.getElementById("mes").style.border="thin solid red";
+document.getElementById("n4").innerHTML="this field required";
+
+return false;}
+else{return true;}
+}</script>
+</body>
+</html>

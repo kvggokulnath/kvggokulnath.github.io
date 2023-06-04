@@ -1,0 +1,58 @@
+<html>
+<head><title>task 2</title></head>
+<body>
+<button onclick="dat()">show date</button></br>
+<p id="dat"></p></br>
+<button onclick="tim()">show Time</button></br>
+<p id="tim"></p></br>
+<script>
+function dat(){
+var d=new Date();
+var y=d.getFullYear();
+var day=d.getDate();
+var mon=d.getMonth();
+switch(mon){
+case 0:
+	mon="January";
+	break;
+case 1:
+	mon="February";
+	break;
+case 2:
+	mon="March";
+	break;
+case 3:
+	mon="April";
+	break;
+case 4:
+	mon="May";
+	break;
+case 5:
+	mon="June";
+	break;
+case 6:
+	mon="July";
+	break;
+case 7:
+	mon="August";
+	break;
+case 8:
+	mon="September";
+	break;
+case 9:
+	mon="October";
+	break;
+case 10:
+	mon="November";
+	break;
+case 11:
+	mon="December";
+	break;
+}
+document.getElementById("dat").innerHTML=day+"/"+mon+"/"+y;
+}
+function tim(){
+var d=new Date();
+document.getElementById("tim").innerHTML=d;
+}
+</script></body></html>

@@ -1,0 +1,46 @@
+<html>
+<head><title>task9</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  rel="stylesheet">
+</head>
+<body class="bg-danger">
+<div class="bg-secondary" style="height:460px;width:660px;margin-left:360px">
+<div style="margin-left:130px;margin-top:100px"></br></br>
+<form onsubmit="return validate()">
+<table cellspacing="4" cellpadding="5" class="text-white">
+<tr><td>Name:</td><td><input type="text" name="name" placeholder="your name" id="na"><span id="t1" style="color:red"></span></td></tr>
+<tr><td>Email:</td><td><input type="text" name="email" placeholder="your email" id="em"><span id="t2" style="color:red"></span></td></tr>
+<tr><td>Password:</td><td><input type="text" name="pwd" id="pwd"><span id="t3" style="color:red"></span></td></tr>
+<tr><td>Phone number:</td><td><input type="text" name="mob" id="mob"><span id="t4" style="color:red"></span></td></tr>
+<tr><td>Gender:</td><td>Male:<input type="radio" value="male" name="gen"> Female:<input type="radio" value="female" name="gen"> Others:<input type="radio" value="others" name="gen"></td></tr>
+<tr><td>Language:</td><td><select name="lang"><option value="select">select language</option>
+<option value="tamil">Tamil</option>
+</select></td></tr>
+<tr><td>Zip code:</td><td><input type="text" name="zip" id="zip"><span id="t5" style="color:red"></span></td></tr>
+<tr><td>About</td><td><textarea cols="30" row="4" name="about" id="abo" placeholder="write about yourself..."></textarea><span id="t6" style="color:red"></span></td></tr>
+<tr><td colspan="2"><input type="submit" value="Register" class="w-100 bg-white" style="font-weight:bold;border-color:white;border-radius:3px"></td></tr>
+</table>
+</form>
+</div>
+</div>
+<script>
+function validate(){
+let na=document.getElementById("na").value;
+let em=document.getElementById("em").value;
+let pwd=document.getElementById("pwd").value;
+let pn=document.getElementById("mob").value;
+let zc=document.getElementById("zip").value;
+let ab=document.getElementById("abo").value;
+if(na=="" || em=="" || pwd=="" || pn=="" || zc=="" ||ab==""){
+document.getElementById("t1").innerHTML="name required";
+document.getElementById("t2").innerHTML="email required";
+document.getElementById("t3").innerHTML="password required";
+document.getElementById("t4").innerHTML="mobile number required";
+document.getElementById("t5").innerHTML="zipcode required";
+document.getElementById("t6").innerHTML="about required";
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head><title>task10</title>
+</head>
+<body>
+<table width="690px">
+<tr><td>concat method:<p id="con"></p></td><td>findindex method:<p id="findind"></p></td></tr>
+<tr><td>copywithin method:<p id="copy"></p></td><td>indexof method:<p id="iof"></p></td></tr>
+<tr><td>map method:<p id="map"></p></td><td>lastIndex of method:</br><p id="last"></p></td></tr>
+<tr><td>every method:</br><p id="every"></p></td><td>push method:</br><p id="push"></p></td></tr>
+<tr><td>some method:</br><p id="some"></p></td><td>pop method:</br><p id="pop"></p></td></tr>
+<tr><td>filter method:</br><p id="filter"></p></td><td>shift method:</br><p id="shift"></p></td></tr>
+<tr><td>find method:</br><p id="find"></p></td><td><button onclick="show()">show</button></td></tr>
+</table>
+<script>
+function show(){
+let a=[10,20,30];
+let b=[40,50,60];
+let c=a.concat(b);
+document.getElementById("con").innerHTML="["+c+"]";
+c=c.copyWithin(3,0);
+document.getElementById("copy").innerHTML="["+c+"]";
+c.map((a)=>{
+document.getElementById("map").innerHTML+=a+"</br>"
+});
+document.getElementById("every").innerHTML=c.every((a)=>{
+return a>15;
+});
+document.getElementById("some").innerHTML=c.some((a)=>{
+return a>15;
+});
+document.getElementById("filter").innerHTML="["+c.filter((a)=>{
+return a>15;
+})+"]";
+document.getElementById("find").innerHTML=c.find((a)=>{
+return a>15;
+});
+document.getElementById("findind").innerHTML=c.findIndex((a)=>{
+return a>15;
+});
+document.getElementById("iof").innerHTML=c.indexOf(20);
+document.getElementById("last").innerHTML=c.lastIndexOf(20);
+c.push(100);
+document.getElementById("push").innerHTML="["+c+"]";
+c.pop();
+document.getElementById("pop").innerHTML="["+c+"]";
+c.shift();
+document.getElementById("shift").innerHTML="["+c+"]";
+}
+</script>
+</body>
+</html>

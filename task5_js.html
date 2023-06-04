@@ -1,0 +1,19 @@
+<html><head><title>Reverse number</title></head>
+<body>
+Enter number:<input type="text" id="num"></br>
+<button onclick="rev()">Reverse</button></br>
+<p id="res"></p>
+<script>
+function rev(){
+var nu=+(document.getElementById("num").value);
+var re=0;
+while(nu!=0){
+re=(re*10)+(nu%10);
+nu=parseInt(nu/10);
+//document.write(nu+"</br>");
+} 
+document.getElementById("res").innerHTML=re;
+}
+</script>
+</body>
+</html>

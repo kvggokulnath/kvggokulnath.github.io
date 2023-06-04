@@ -1,0 +1,80 @@
+<html>
+<head><title>task3</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  rel="stylesheet">
+<script src="https://kit.fontawesome.com/043ab04876.js" crossorigin="anonymous"></script>
+<style>
+input{
+border-color:white;
+}</style>
+</head>
+<body style="background-color:rgb(211,211,211)">
+<div style="margin-left:360px">
+<form onsubmit="return validate()">
+<table cellspacing="4" cellpadding="5">
+<tr id="f1"><td>First Name:</td><td><i class="fa-solid fa-user" style="height:30px;width:30px;margin-top:10px"></i>
+<input type="text" name="fname" placeholder="First name" id="fn"><span style="height:30px;width:30px;margin-top:10px;background-color:white" id="s1"></span>
+</br><p id="t1"></p></td></tr>
+<tr id="f2"><td>Last Name:</td><td><i class="fa-solid fa-user" style="height:30px;width:30px;margin-top:10px"></i>
+<input type="text" name="lname" placeholder="Last name" id="ln"><span style="height:30px;width:30px;margin-top:10px;background-color:white" id="s2"></span>
+</br><p id="t2"></p></td></tr>
+<tr id="f3"><td>Email:</td><td><i class="fa-solid fa-envelope" style="height:30px;width:30px;margin-top:10px"></i>
+<input type="text" name="email" placeholder="your email" id="em"><span style="height:30px;width:30px;margin-top:10px;background-color:white" id="s3"></span>
+</br><p id="t3"></p></td></tr>
+<tr id="f4"><td>Phone number:</td><td><i class="fa-solid fa-phone" style="height:30px;width:30px;margin-top:10px"></i>
+<input type="text" name="mob" placeholder="+91 9876543467"id="mob"><span style="height:30px;width:30px;margin-top:10px;background-color:white" id="s4"></span>
+</br><p id="t4"></p></td></tr>
+<tr id="f5"><td>Address:</td><td><i class="fa-solid fa-house" style="height:30px;width:30px;margin-top:10px"></i>
+<input type="text" name="add" placeholder="address" id="add"><span style="height:30px;width:30px;margin-top:10px;background-color:white" id="s5"></span>
+</br><p id="t5"></p></td></tr>
+<tr id="f6"><td>City:</td><td><i class="fa-solid fa-house" style="height:30px;width:30px;margin-top:10px"></i>
+<input type="text" name="cit" placeholder="city" id="cit"><span style="height:30px;width:30px;margin-top:10px;background-color:white" id="s6"></span>
+</br><p id="t6"></p></td></tr>
+<tr><td>State:</td><td><i class="fa-solid fa-bars" style="height:30px;width:30px;margin-top:10px"></i><select name="stat"><option value="" disabled selected>select your state</option>
+<option value="tamil">TamilNadu</option>
+</select></td></tr>
+<tr><td rowspan="2">Do you hava hosting?:</td><td><input type="radio" value="yes" name="host">Yes</td></tr>
+<tr><td><input type="radio" value="no" name="host">No</td></tr>
+<tr><td>Project description</td><td><i class="fa-solid fa-pencil" style="height:40px;width:40px;margin-top:10px"></i><textarea cols="30" row="4" name="about" id="pro" placeholder="Project description"></textarea></td></tr>
+<tr><td colspan="2" class="text-center"><div style="width:80px;margin-left:160px" class=" bg-warning"><input type="submit" value="send" style="border-color:orange" class=" bg-warning text-white"><i class="fa-solid fa-rocket" style="height:20px;width:20px;margin-top:10px"></i></div></td></tr>
+</table>
+</form>
+</div>
+<script>
+function validate(){
+let fn=document.getElementById('fn').value;
+let ln=document.getElementById('ln').value;
+let em=document.getElementById('em').value;
+let mob=document.getElementById('mob').value;
+let ad=document.getElementById('add').value;
+let cit=document.getElementById('cit').value;
+if(fn=="" || ln=="" || em=="" || mob=="" || ad=="" || cit==""){
+document.getElementById('s1').innerHTML="<i class='fa-solid fa-x'></i>";
+document.getElementById('t1').innerHTML="please supply your first name";
+document.getElementById('f1').style.color="red";
+
+document.getElementById('s2').innerHTML="<i class='fa-solid fa-x'></i>";
+document.getElementById('t2').innerHTML="please supply your last name";
+document.getElementById('f2').style.color="red";
+
+document.getElementById('s3').innerHTML="<i class='fa-solid fa-x'></i>";
+document.getElementById('t3').innerHTML="please supply your email";
+document.getElementById('f3').style.color="red";
+
+document.getElementById('s4').innerHTML="<i class='fa-solid fa-x'></i>";
+document.getElementById('t4').innerHTML="please supply your phone number";
+document.getElementById('f4').style.color="red";
+
+document.getElementById('s5').innerHTML="<i class='fa-solid fa-x'></i>";
+document.getElementById('t5').innerHTML="please supply your address";
+document.getElementById('f5').style.color="red";
+
+document.getElementById('s6').innerHTML="<i class='fa-solid fa-x'></i>";
+document.getElementById('t6').innerHTML="please supply your city";
+document.getElementById('f6').style.color="red";
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>
